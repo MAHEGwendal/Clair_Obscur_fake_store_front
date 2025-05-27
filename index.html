@@ -69,22 +69,22 @@
                     Nous sommes l'Expédition 33.</p>
             </div>
 
-<div class="video-trailer col-lg-6" style="position: relative;">
-    
-    <button id="playButton">
-        <img src="images/play.svg" class="btn-play" alt="Play">
-    </button>
-    
-    <img src="images/poste_CO.jpg" id="posterContainer" alt="Poster" style="width: 100%;">
+            <div class="video-trailer col-lg-6" style="position: relative;">
 
-    <figure id="videoIframe" class="ratio ratio-16x9 border-top border-warning-subtle" style="display: none;">
-        <iframe id="videoIframe" width="560" height="315"
-            src= "https://www.youtube.com/embed/2fsMD9tPFY0"
-            title="Trailer Clair obscur"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </figure>
-</div>
+                <button id="playButton">
+                    <img src="images/play.svg" class="btn-play" alt="Play">
+                </button>
+
+                <img src="images/poste_CO.jpg" id="posterContainer" alt="Poster" style="width: 100%;">
+
+                <figure id="videoIframe" class="ratio ratio-16x9 border-top border-warning-subtle"
+                    style="display: none;">
+                    <iframe id="videoIframe" width="560" height="315" src="https://www.youtube.com/embed/2fsMD9tPFY0"
+                        title="Trailer Clair obscur"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </figure>
+            </div>
 
 
 
@@ -295,7 +295,22 @@
             </div>
         </div>
     </div>
-    <script src="./js/script.js"></script>
+
+<div class="modal fade" id="AchatModal" tabindex="-1" aria-labelledby="AchatModalArial" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content bg-dark border border-warning-subtle">
+            <div class="modal-header">
+                <h5 class="modal-title text-warning" id="AchatModalArial">Plateforme d'achat</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <div id="achatLinksContainer" class="d-flex flex-column gap-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+            <script src="./js/script.js"></script>
 </body>
 
 </html>
