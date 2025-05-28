@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const achatModal = document.getElementById('AchatModal');
     const achatLinksContainer = document.getElementById('achatLinksContainer');
     const btnAchat = document.getElementById('btn_achat');
+    const youtubeModal = document.getElementById('youtubeModal');
+    const youtubeIframe = document.getElementById('youtubeIframe');
+    const playButton = document.getElementById("playButton");
+    const poster = document.getElementById("posterContainer");
+    const video = document.getElementById("videoIframe");
 
     const images = {
         0: "images/img_standard.jpg",
@@ -18,39 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
         1: "Acheter en physique",
         2: "Acheter en physique"
     }
-
-    editionSelect.addEventListener("change", (e) => {
-        const selectedValue = e.target.value;
-        editionImage.src = images[selectedValue];
-    });
-
-    editionPlatform.addEventListener("change", (e) => {
-        const selectedValue = e.target.value;
-        editionBTN.textContent = txt_btn_achat[selectedValue];
-    });
-
-    const youtubeModal = document.getElementById('youtubeModal');
-    const youtubeIframe = document.getElementById('youtubeIframe');
-
-    youtubeModal.addEventListener('show.bs.modal', function (event) {
-        const button = event.relatedTarget;
-        const videoUrl = button.getAttribute('data-video');
-        youtubeIframe.src = videoUrl;
-    });
-
-    youtubeModal.addEventListener('hidden.bs.modal', function () {
-        youtubeIframe.src = '';
-    });
-
-    const playButton = document.getElementById("playButton");
-    const poster = document.getElementById("posterContainer");
-    const video = document.getElementById("videoIframe");
-
-    playButton.addEventListener("click", function () {
-        playButton.style.display = "none";
-        poster.style.display = "none";
-        video.style.display = "block";
-    });
 
     const achatLinks = {
         0: { // Standard
@@ -95,6 +67,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    //Change the image from the edition select
+    editionSelect.addEventListener("change", (e) => {
+        const selectedValue = e.target.value;
+        editionImage.src = images[selectedValue];
+    });
+
+    //Change the button text from the edition select
+    editionPlatform.addEventListener("change", (e) => {
+        const selectedValue = e.target.value;
+        editionBTN.textContent = txt_btn_achat[selectedValue];
+    });
+
+
+    // Show the modal with the correct links when the button is clicked
+    youtubeModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const videoUrl = button.getAttribute('data-video');
+        youtubeIframe.src = videoUrl;
+    });
+
+    youtubeModal.addEventListener('hidden.bs.modal', function () {
+        youtubeIframe.src = '';
+    });
+
+    playButton.addEventListener("click", function () {
+        playButton.style.display = "none";
+        poster.style.display = "none";
+        video.style.display = "block";
+    });
+
+
+    // Show the modal with the correct links when the button is clicked
     btnAchat.addEventListener('click', function () {
         const edition = document.getElementById("choixEdition").value;
         const platform = document.getElementById("choixPlat").value;

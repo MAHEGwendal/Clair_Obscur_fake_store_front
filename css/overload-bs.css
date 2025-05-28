@@ -1,9 +1,9 @@
-/* ----------- Déclarations CSS générales ----------- */
+/* ----------- General CSS declarations ----------- */
 :root{
   --font-title : 'Cinzel';
 }
 
-/* On va déclarer des comportements CSS pour TOUS LES ÉLÉMENTS de la page */
+/* declaration of CSS behaviours for ALL ELEMENTS on the page */
 
 h1, h2, h3, h4, h5{
   font-family:var(--font-title);
@@ -36,7 +36,7 @@ p{
   color: white;
 }
 
-/* ----------- Déclaration CSS selon la strcuture HTML de la page ----------- */
+/* ----------- CSS declaration according to the page's HTML structure ----------- */
 
 header{
   max-height: 850px; 
@@ -60,7 +60,7 @@ footer {
   color: white; /* pour voir le texte si fond noir */
 }
 
-/* ----------- déclaration de classes CSS particulières ----------- */
+/* ----------- declaration of particular CSS classes ----------- */
 
 @keyframes fadeIn { /*Animation du logo*/
 from {
